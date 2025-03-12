@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +19,7 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body
-    class="min-h-dvh font-barlow text-center text-lg text-veryDarkgrayishBlue"
+    class="min-h-dvh font-barlow text-center text-lg text-veryDarkgrayishBlue antialiased"
   >
     <header class="bg-headerBg p-4">
       <div class="max-w-7xl w-full mx-auto flex justify-between items-center">
@@ -88,24 +88,24 @@
         </picture>
         <div class="py-12 px-4">
           <div>
-            <h2 class="font-bold font-fraunces text-5xl text-desaturatedBlue">
+            <h2 class="font-bold font-fraunces text-4xl text-desaturatedBlue">
               Transform your brand
             </h2>
-            <p class="mt-4">
+            <p class="mt-4 text-balance">
               We are a full-service creative agency specializing in helping
               brands grow fast. Engage your clients through compelling visuals
               that do most of the marketing for you.
             </p>
             <a
               href="#"
-              class="mt-4 inline-block uppercase font-bold underline decoration-dotted decoration-4 decoration-softYellow cursor-pointer hover:decoration-solid"
+              class="mt-4 inline-block uppercase font-bold underline decoration-dotted decoration-4 decoration-softYellow cursor-pointer hover:decoration-solid font-fraunces"
               >Learn more</a
             >
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="grid">
         <picture>
           <source
             srcset="./images/desktop/image-stand-out.jpg"
@@ -116,22 +116,28 @@
             alt="cup on a pink background"
           />
         </picture>
-        <div>
+        <div class="py-12 px-4">
           <div>
-            <h2>Stand out to the right audience</h2>
-            <p>
+            <h2 class="font-bold font-fraunces text-4xl text-desaturatedBlue">
+              Stand out to the right audience
+            </h2>
+            <p class="mt-4 text-balance">
               Using a collaborative formula of designers, researchers,
               photographers, videographers, and copywriters, we’ll build and
               extend your brand in digital places.
             </p>
-            <a href="#">Learn more</a>
+            <a
+              href="#"
+              class="mt-4 inline-block uppercase font-bold underline decoration-dotted decoration-4 decoration-softRed cursor-pointer hover:decoration-solid font-fraunces"
+              >Learn more</a
+            >
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <picture>
+      <section class="grid">
+        <div class="grid grid-cols-1 grid-rows-2">
+          <picture class="col-span-1 col-start-1 row-start-1 row-span-2">
             <source
               srcset="./images/desktop/image-graphic-design.jpg"
               media="(min-width: 48rem)"
@@ -141,17 +147,20 @@
               alt="apples on a blue background"
             />
           </picture>
-          <div>
-            <h2>Graphic design</h2>
-            <p>
+          <div
+            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col justify-center items-center text-graphicsDesign gap-4"
+          >
+            <h2 class="font-fraunces text-3xl font-bold">Graphic design</h2>
+            <p class="text-balance">
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
               attention.
             </p>
           </div>
         </div>
-        <div>
-          <picture>
+
+        <div class="grid grid-cols-1 grid-rows-2">
+          <picture class="col-span-1 col-start-1 row-start-1 row-span-2">
             <source
               srcset="./images/desktop/image-photography.jpg"
               media="(min-width: 48rem)"
@@ -161,9 +170,11 @@
               alt="orange on a blue background"
             />
           </picture>
-          <div>
-            <h2>Photography</h2>
-            <p>
+          <div
+            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col justify-center items-center text-photographyText gap-4"
+          >
+            <h2 class="font-fraunces text-3xl font-bold">Photography</h2>
+            <p class="text-balance">
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
             </p>
@@ -171,43 +182,59 @@
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>Client testimonials</h2>
-          <div>
-            <figure>
-              <img src="./images/image-emily.jpg" alt="Emily" />
-              <blockquote>
+      <section class="px-4 py-8">
+        <div class="max-w-6xl w-full mx-auto">
+          <h2
+            class="text-darkGrayishBlue uppercase text-2xl md:text-3xl font-semibold font-fraunces"
+          >
+            Client testimonials
+          </h2>
+          <div class="mt-8 grid gap-8">
+            <figure class="flex flex-col items-center gap-4 md:gap-8">
+              <img
+                src="./images/image-emily.jpg"
+                alt="Emily"
+                class="w-20 h-20 rounded-full"
+              />
+              <blockquote class="text-veryDarkgrayishBlue font-semibold">
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </blockquote>
               <figcaption>
-                <h3>Emily R.</h3>
-                <p>Marketing Director</p>
+                <h3 class="font-fraunces font-black">Emily R.</h3>
+                <p class="text-grayishBlue">Marketing Director</p>
               </figcaption>
             </figure>
 
-            <figure>
-              <img src="./images/image-thomas.jpg" alt="Thomas" />
-              <blockquote>
+            <figure class="flex flex-col items-center gap-4 md:gap-8">
+              <img
+                src="./images/image-thomas.jpg"
+                alt="Thomas"
+                class="w-20 h-20 rounded-full"
+              />
+              <blockquote class="text-veryDarkgrayishBlue font-semibold">
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </blockquote>
               <figcaption>
-                <h3>Thomas S.</h3>
-                <p>Chief Operating Officer</p>
+                <h3 class="font-fraunces font-black">Thomas S.</h3>
+                <p class="text-grayishBlue">Chief Operating Officer</p>
               </figcaption>
             </figure>
 
-            <figure>
-              <img src="./images/image-jennie.jpg" alt="Jennie" />
-              <blockquote>
+            <figure class="flex flex-col items-center gap-4 md:gap-8">
+              <img
+                src="./images/image-jennie.jpg"
+                alt="Jennie"
+                class="w-20 h-20 rounded-full"
+              />
+              <blockquote class="text-veryDarkgrayishBlue font-semibold">
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </blockquote>
               <figcaption>
-                <h3>Jennie F.</h3>
-                <p>Business Owner</p>
+                <h3 class="font-fraunces font-black">Jennie F.</h3>
+                <p class="text-grayishBlue">Business Owner</p>
               </figcaption>
             </figure>
           </div>
