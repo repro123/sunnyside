@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-headerBg: #3ebfff;
+  --color-softRed: hsl(7, 99%, 70%);
+  --color-softYellow: hsl(51, 100%, 49%);
+  --color-graphicsDesign: hsl(167, 40%, 24%);
+  --color-photographyText: hsl(198, 62%, 26%);
+  --color-footer: hsl(168, 34%, 41%);
+  --color-desaturatedBlue: hsl(212, 27%, 19%);
+  --color-veryDarkgrayishBlue: hsl(213, 9%, 39%);
+  --color-darkGrayishBlue: hsl(232, 10%, 55%);
+  --color-grayishBlue: hsl(210, 4%, 67%);
+
+  /* fonts */
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", sans-serif;
+}
