@@ -51,6 +51,7 @@
     --color-softYellow: hsl(51, 100%, 49%);
     --color-graphicsDesign: hsl(167, 40%, 24%);
     --color-photographyText: hsl(198, 62%, 26%);
+    --color-footer: hsl(168, 34%, 41%);
     --color-desaturatedBlue: hsl(212, 27%, 19%);
     --color-veryDarkgrayishBlue: hsl(213, 9%, 39%);
     --color-darkGrayishBlue: hsl(232, 10%, 55%);
@@ -800,6 +801,9 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-none {
     grid-template-columns: none;
   }
@@ -1201,6 +1205,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-footer {
+    background-color: var(--color-footer);
+  }
   .bg-headerBg {
     background-color: var(--color-headerBg);
   }
@@ -1396,6 +1403,9 @@
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
   }
   .text-center {
     text-align: center;
@@ -2047,6 +2057,22 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .\*\:w-full {
+    :is(& > *) {
+      width: 100%;
+    }
+  }
+  .\*\:border {
+    :is(& > *) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .\*\:border-red-500 {
+    :is(& > *) {
+      border-color: var(--color-red-500);
+    }
   }
   .hover\:decoration-solid {
     &:hover {
