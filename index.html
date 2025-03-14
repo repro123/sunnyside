@@ -19,11 +19,11 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body
-    class="min-h-dvh font-barlow text-center text-lg text-veryDarkgrayishBlue antialiased"
+    class="min-h-dvh font-barlow text-center text-lg md:text-xl text-veryDarkgrayishBlue antialiased"
   >
-    <header class="bg-headerBg p-4">
+    <header class="bg-headerBg p-4 pt-8">
       <div
-        class="max-w-7xl w-full mx-auto flex justify-between items-center relative"
+        class="max-w-[100rem] w-full mx-auto flex justify-between items-center relative"
       >
         <a href="#" aria-label="Sunny Side Home" class="focus:outline-0">
           <img src="./images/logo.svg" alt="Sunny Side" class="w-40" />
@@ -45,10 +45,10 @@
           ></div>
           <nav
             id="primaryNav"
-            class="absolute bg-white top-23 w-full peer-aria-expanded:block z-50 right-0 py-8 hidden"
+            class="absolute bg-white top-23 w-full peer-aria-expanded:block z-50 right-0 py-8 hidden md:block md:static md:bg-transparent md:py-0"
           >
             <ul
-              class="flex flex-col items-center gap-6 font-semibold text-darkGrayishBlue"
+              class="flex flex-col items-center gap-6 font-semibold text-darkGrayishBlue md:flex-row md:gap-12 md:text-white"
             >
               <li><a href="#" class="navlinks">About</a></li>
               <li><a href="#" class="navlinks">Services</a></li>
@@ -56,7 +56,7 @@
               <li>
                 <a
                   href="#"
-                  class="bg-softYellow px-6 py-3 rounded-full navlinks"
+                  class="bg-softYellow px-6 py-3 rounded-full navlinks uppercase md:bg-white md:text-desaturatedBlue md:hover:bg-blue-300 md:hover:text-white"
                   >Contact</a
                 >
               </li>
@@ -67,7 +67,9 @@
     </header>
 
     <main>
-      <section class="grid grid-cols-1 grid-rows-1 bg-headerBg h-svh">
+      <section
+        class="grid grid-cols-1 grid-rows-1 bg-headerBg h-[80vh] md:h-[100vh]"
+      >
         <picture class="row-start-1 row-span-1 col-start-1 col-span-1 w-full">
           <source
             srcset="./images/desktop/image-header.jpg"
@@ -82,7 +84,7 @@
         <div
           class="row-start-1 row-span-1 col-start-1 col-span-1 relative z-10 grid place-items-center max-w-6xl mx-auto w-full"
         >
-          <div class="grid place-items-center gap-14">
+          <div class="grid place-items-center gap-14 md:-mt-24">
             <h1
               class="font-fraunces text-white text-4xl md:text-6xl -mt-4 tracking-widest font-bold uppercase leading-[1.5]"
             >
@@ -93,8 +95,8 @@
         </div>
       </section>
 
-      <section class="grid">
-        <picture>
+      <section class="grid md:grid-cols-2">
+        <picture class="md:col-start-2">
           <source
             srcset="./images/desktop/image-transform.jpg"
             media="(min-width: 48rem)"
@@ -102,12 +104,18 @@
           <img
             src="./images/mobile/image-transform.jpg"
             alt="an egg on a yellow background"
-            class="w-full"
+            class="w-full object-cover"
           />
         </picture>
-        <div class="py-12 px-4">
-          <div>
-            <h2 class="font-bold font-fraunces text-4xl text-desaturatedBlue">
+        <div
+          class="py-12 px-4 md:col-start-1 md:row-start-1 md:flex md:justify-center md:items-center"
+        >
+          <div
+            class="md:m-auto md:flex md:flex-col md:gap-8 md:items-start md:text-left md:max-w-xl"
+          >
+            <h2
+              class="font-bold font-fraunces text-4xl text-desaturatedBlue md:text-5xl"
+            >
               Transform your brand
             </h2>
             <p class="mt-4 text-balance">
@@ -124,8 +132,8 @@
         </div>
       </section>
 
-      <section class="grid">
-        <picture>
+      <section class="grid md:grid-cols-2">
+        <picture class="md:col-start-1 md:row-start-1">
           <source
             srcset="./images/desktop/image-stand-out.jpg"
             media="(min-width: 48rem)"
@@ -136,9 +144,15 @@
             class="w-full"
           />
         </picture>
-        <div class="py-12 px-4">
-          <div>
-            <h2 class="font-bold font-fraunces text-4xl text-desaturatedBlue">
+        <div
+          class="py-12 px-4 md:col-start-2 md:flex md:justify-center md:items-center"
+        >
+          <div
+            class="md:m-auto md:flex md:flex-col md:gap-8 md:items-start md:text-left md:max-w-xl"
+          >
+            <h2
+              class="font-bold font-fraunces text-4xl text-desaturatedBlue md:text-5xl"
+            >
               Stand out to the right audience
             </h2>
             <p class="mt-4 text-balance">
@@ -155,8 +169,8 @@
         </div>
       </section>
 
-      <section class="grid">
-        <div class="grid grid-cols-1 grid-rows-2">
+      <section class="grid md:grid-cols-2">
+        <div class="grid grid-cols-1 grid-rows-2 md:col-start-1 md:row-start-1">
           <picture class="col-span-1 col-start-1 row-start-1 row-span-2">
             <source
               srcset="./images/desktop/image-graphic-design.jpg"
@@ -169,9 +183,11 @@
             />
           </picture>
           <div
-            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col justify-center items-center text-graphicsDesign gap-4"
+            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col justify-center items-center md:max-w-xl md:mx-auto text-graphicsDesign gap-4"
           >
-            <h2 class="font-fraunces text-3xl font-bold">Graphic design</h2>
+            <h2 class="font-fraunces text-3xl font-bold md:text-4xl">
+              Graphic design
+            </h2>
             <p class="text-balance">
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
@@ -180,7 +196,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 grid-rows-2">
+        <div class="grid grid-cols-1 grid-rows-2 md:col-start-2">
           <picture class="col-span-1 col-start-1 row-start-1 row-span-2">
             <source
               srcset="./images/desktop/image-photography.jpg"
@@ -193,9 +209,11 @@
             />
           </picture>
           <div
-            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex flex-col justify-center items-center text-photographyText gap-4"
+            class="relative z-10 col-span-1 col-start-1 row-span-1 row-start-2 flex md:max-w-xl md:mx-auto flex-col justify-center items-center text-photographyText gap-4"
           >
-            <h2 class="font-fraunces text-3xl font-bold">Photography</h2>
+            <h2 class="font-fraunces text-3xl font-bold md:text-4xl">
+              Photography
+            </h2>
             <p class="text-balance">
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
@@ -205,14 +223,14 @@
       </section>
 
       <section class="px-4 py-8">
-        <div class="max-w-6xl w-full mx-auto">
+        <div class="max-w-7xl w-full mx-auto">
           <h2
             class="text-darkGrayishBlue uppercase text-2xl md:text-3xl font-semibold font-fraunces"
           >
             Client testimonials
           </h2>
-          <div class="mt-8 grid gap-8">
-            <figure class="flex flex-col items-center gap-4 md:gap-8">
+          <div class="mt-8 md:mt-12 grid gap-8 md:grid-cols-3">
+            <figure class="flex flex-col items-center gap-4 md:gap-12">
               <img
                 src="./images/image-emily.jpg"
                 alt="Emily"
@@ -228,7 +246,7 @@
               </figcaption>
             </figure>
 
-            <figure class="flex flex-col items-center gap-4 md:gap-8">
+            <figure class="flex flex-col items-center gap-4 md:gap-12">
               <img
                 src="./images/image-thomas.jpg"
                 alt="Thomas"
@@ -244,7 +262,7 @@
               </figcaption>
             </figure>
 
-            <figure class="flex flex-col items-center gap-4 md:gap-8">
+            <figure class="flex flex-col items-center gap-4 md:gap-12">
               <img
                 src="./images/image-jennie.jpg"
                 alt="Jennie"
@@ -263,7 +281,7 @@
         </div>
       </section>
 
-      <section class="grid grid-cols-2 mt-12">
+      <section class="grid grid-cols-2 md:grid-cols-4 mt-12">
         <picture>
           <source
             srcset="./images/desktop/image-gallery-milkbottles.jpg"
@@ -311,8 +329,8 @@
       </section>
     </main>
 
-    <footer class="px-4 pt-12 text-footer bg-[hsl(167,_44%,_70%)]">
-      <div class="max-w-6xl mx-auto w-full">
+    <footer class="px-4 pt-12 md:pt-20 text-footer bg-[hsl(167,_44%,_70%)]">
+      <div class="mx-auto w-full">
         <div class="flex flex-col items-center gap-8">
           <img src="./images/logo.svg" alt="Sunnyside" class="mx-auto w-40" />
           <ul role="list" class="mx-auto flex gap-6 items-center">
@@ -369,7 +387,7 @@
         </div>
 
         <div
-          class="grid place-items-center py-3 border-t-2 border-t-white font-bold mt-4"
+          class="grid place-items-center py-3 border-t-2 border-t-white font-bold mt-4 w-full"
         >
           <p class="text-sm md:text-base">
             Challenge by
