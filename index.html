@@ -22,7 +22,9 @@
     class="min-h-dvh font-barlow text-center text-lg text-veryDarkgrayishBlue antialiased"
   >
     <header class="bg-headerBg p-4">
-      <div class="max-w-7xl w-full mx-auto flex justify-between items-center">
+      <div
+        class="max-w-7xl w-full mx-auto flex justify-between items-center relative"
+      >
         <a href="#" aria-label="Sunny Side Home" class="focus:outline-0">
           <img src="./images/logo.svg" alt="Sunny Side" class="w-40" />
         </a>
@@ -31,17 +33,33 @@
             aria-expanded="false"
             aria-controls="primaryNav"
             id="toggleNav"
-            class="cursor-pointer focus:outline-1 outline-white p-2"
+            class="cursor-pointer focus:outline-1 outline-veryDarkgrayishBlue md:hidden relative z-50 peer"
           >
             <img src="./images/icon-hamburger.svg" alt="" class="w-8 h-8" />
           </button>
-          <div class="hidden"></div>
-          <nav id="primaryNav" class="hidden">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+          <div
+            class="hidden peer-aria-expanded:block absolute border-b-[3rem] border-b-white border-l-[2.5rem] z-50 right-0 border-l-transparent triangle top-16"
+          ></div>
+          <div
+            class="overlay z-40 w-screen h-screen peer-aria-expanded:block fixed top-0 left-0 hidden"
+          ></div>
+          <nav
+            id="primaryNav"
+            class="absolute bg-white top-23 w-full peer-aria-expanded:block z-50 right-0 py-8 hidden"
+          >
+            <ul
+              class="flex flex-col items-center gap-6 font-semibold text-darkGrayishBlue"
+            >
+              <li><a href="#" class="navlinks">About</a></li>
+              <li><a href="#" class="navlinks">Services</a></li>
+              <li><a href="#" class="navlinks">Projects</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="bg-softYellow px-6 py-3 rounded-full navlinks"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -49,7 +67,7 @@
     </header>
 
     <main>
-      <section class="grid grid-cols-1 grid-rows-1 bg-headerBg">
+      <section class="grid grid-cols-1 grid-rows-1 bg-headerBg h-svh">
         <picture class="row-start-1 row-span-1 col-start-1 col-span-1 w-full">
           <source
             srcset="./images/desktop/image-header.jpg"
@@ -293,51 +311,84 @@
       </section>
     </main>
 
-    <footer class="px-4 pt-12 bg-footer">
+    <footer class="px-4 pt-12 text-footer bg-[hsl(167,_44%,_70%)]">
       <div class="max-w-6xl mx-auto w-full">
-        <div>
-          <img src="./images/logo.svg" alt="Sunnyside" />
-          <ul role="list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-          </ul>
-          <ul role="list">
+        <div class="flex flex-col items-center gap-8">
+          <img src="./images/logo.svg" alt="Sunnyside" class="mx-auto w-40" />
+          <ul role="list" class="mx-auto flex gap-6 items-center">
             <li>
-              <a href="#" aria-label="facebook page"
+              <a href="#" class="font-black cursor-pointer hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#" class="font-black cursor-pointer hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="font-bold cursor-pointer hover:text-white"
+                >Projects</a
+              >
+            </li>
+          </ul>
+          <ul role="list" class="flex gap-8 items-center md:mt-12">
+            <li>
+              <a
+                href="#"
+                aria-label="facebook page"
+                class="cursor-pointer w-12 h-12 grid place-items-center rounded-full hover:bg-white"
                 ><img src="./images/icon-facebook.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="#" aria-label="instagram page"
+              <a
+                href="#"
+                aria-label="instagram page"
+                class="cursor-pointer w-12 h-12 grid place-items-center rounded-full hover:bg-white"
                 ><img src="./images/icon-instagram.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="#" aria-label="twiter page"
+              <a
+                href="#"
+                aria-label="twiter page"
+                class="cursor-pointer w-12 h-12 grid place-items-center rounded-full hover:bg-white"
                 ><img src="./images/icon-twitter.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="#" aria-label="pinterest page"
+              <a
+                href="#"
+                aria-label="pinterest page"
+                class="cursor-pointer w-12 h-12 grid place-items-center rounded-full hover:bg-white"
                 ><img src="./images/icon-pinterest.svg" alt=""
               /></a>
             </li>
           </ul>
         </div>
 
-        <div>
-          <p class="attribution">
+        <div
+          class="grid place-items-center py-3 border-t-2 border-t-white font-bold mt-4"
+        >
+          <p class="text-sm md:text-base">
             Challenge by
             <a
               href="https://www.frontendmentor.io?ref=challenge"
               target="_blank"
+              class="text-white underline hover:text-white/80"
               >Frontend Mentor</a
             >. Coded by
-            <a href="https://github.com/repro123/">Bello Ibrahim</a>.
+            <a
+              class="text-white underline hover:text-white/80"
+              href="https://github.com/repro123/"
+              >Bello Ibrahim</a
+            >.
           </p>
         </div>
       </div>
     </footer>
   </body>
+
+  <script src="./src/script.js"></script>
 </html>
