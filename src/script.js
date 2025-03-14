@@ -17,6 +17,7 @@ toggleNavBtn.addEventListener("click", function () {
 function closeNav() {
   toggleNavBtn.setAttribute("aria-expanded", "false");
   body.classList.remove("overflow-hidden");
+  overlay.classList.add("hidden");
 }
 
 overlay.addEventListener("click", closeNav);
